@@ -18,24 +18,24 @@ public class StudentController {
     @Autowired
     StudentService studentService;
 
-    @GetMapping(value = "/student")
+    @GetMapping(value = "/api/v1/student")
     public ResponseEntity<List<Student>> listStudents() {
         return ResponseEntity.ok(studentService.getAllStudents());
     }
 
-    @DeleteMapping(value = "/student")
+    @DeleteMapping(value = "/api/v1/student")
     public ResponseEntity<Void> deleteStudent(@RequestParam("idCard") String idCard) {
         studentService.deleteStudent(idCard);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
-    @PostMapping(value = "/student")
+    @PostMapping(value = "/api/v1/student")
     public ResponseEntity<Void> insertStudent(@RequestBody Student student) {
         studentService.insertStudent(student);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @PutMapping(value = "/student")
+    @PutMapping(value = "/api/v1/student")
     public ResponseEntity<Void> updateStudent(@RequestBody Student student) {
         studentService.updateStudent(student);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();

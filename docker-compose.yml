@@ -2,8 +2,6 @@ version: "3"
 services:
   mongodb:
     image: mongo:3.2
-    volumes:
-      - /Users/xywu/Documents/study/data/db:/data/db #数据文件挂载
     ports:
       - 27017:27017
     networks:

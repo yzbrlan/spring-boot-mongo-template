@@ -1,13 +1,8 @@
-FROM registry.cn-hangzhou.aliyuncs.com/devcloud_base_image/openjdk:8
+FROM openjdk:8-jre-slim
+COPY target/lab.jar /app/app.jar
 
-ARG APP_NAME
-ENV APP_NAME=${APP_NAME}
+ENV LANG C.UTF-8
 
-COPY ./target/${APP_NAME}.jar /home/admin/${APP_NAME}.jar
-COPY ./start.sh /home/admin/start.sh
-
-RUN chmod +x /home/admin/*.sh
-
-WORKDIR /home/admin
-
-ENTRYPOINT ["/home/admin/start.sh"]
+WORKDIR /app
+EXPOSE 8080
+ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar app.jar"]

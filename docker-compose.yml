@@ -9,5 +9,17 @@ services:
     networks:
       - network
 
+  lab1:
+    build: ./
+    environment:
+      MONGO_URI: mongodb://mongodb:27017/lab
+      SERVER_PORT: 9999
+    ports:
+      - '7777:9999'
+    links:
+      - mongodb
+    networks:
+      - network
+
 networks:
   network: {}

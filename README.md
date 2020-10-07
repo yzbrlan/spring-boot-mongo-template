@@ -1,7 +1,11 @@
+---
+
 - [API使用说明](#api使用说明)
 - [项目开发](#项目开发)
 - [项目部署](#项目部署)
   - [docker-compose](#docker-compose)
+
+---
 
 ## API使用说明
 ```
@@ -46,7 +50,7 @@ Body student {
 
 项目分为三层从底向上进行开发，如图所示
 
-![](jiago- [API使用说明](#api使用说明)
+![](jiagou.png)
 
 ## 项目部署
 

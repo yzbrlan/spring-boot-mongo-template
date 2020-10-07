@@ -1,3 +1,5 @@
+[TOC]
+
 ## API使用说明
 ```
 得到所有同学的信息
@@ -34,7 +36,7 @@ Body student {
 ```
 
 
-## 开发
+## 项目开发
 项目采用了 Restful 的风格开发API。
 
 采用的技术栈为：springboot、mongo、docker、docker-compose。
@@ -43,7 +45,7 @@ Body student {
 
 ![](jiagou.png)
 
-## 部署
+## 项目部署
 
 ### docker-compose
 

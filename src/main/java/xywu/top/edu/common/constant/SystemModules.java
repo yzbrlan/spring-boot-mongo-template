@@ -6,10 +6,6 @@ package xywu.top.edu.common.constant;
  */
 
 public enum SystemModules {
-    SYSTEM(Origin.INTERNAL, "00"),
-    EXTERNAL(Origin.EXTERNAL, "01"),
-    SELF(Origin.INTERNAL, "02"),
-
     STUDENTS(Origin.INTERNAL,"03");
 
     private final Origin origin;
